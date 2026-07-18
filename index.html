@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0b" />
   <title>Bee's Beans & Greens</title>
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <header class="hero">
-    <div class="logo-mark">🐝</div>
-
-    <h1>Bee's Beans & Greens</h1>
-
-    <p class="tagline">
-      Where caffeine meets poor decisions.
-    </p>
-
-    <a href="#menu" class="enter-button">
-      Enter the Menu
-    </a>
-  </header>
-
-  <main id="menu">
-
-    <section class="menu-section">
-      <h2>Beans</h2>
-
-      <div id="beans-menu" class="menu-grid"></div>
-    </section>
-
-    <section class="menu-section">
-      <h2>Greens</h2>
-
-      <div id="greens-menu" class="menu-grid"></div>
-    </section>
-
-  </main>
-
-  <button id="cart-button" class="cart-button">
-    Order
-    <span id="cart-count">0</span>
-  </button>
-
-  <div id="cart-panel" class="cart-panel">
-    <div class="cart-header">
-      <h2>Your Poor Decisions</h2>
-      <button id="close-cart" aria-label="Close order">×</button>
-    </div>
-
-    <div id="cart-items"></div>
-
-    <div class="cart-footer">
-      <p>
-        Total:
-        <strong id="cart-total">$0.00</strong>
-      </p>
-
-      <button id="checkout-button">
-        Continue to Checkout
-      </button>
-    </div>
+  <div id="welcome" class="welcome-screen">
+    <div class="crest" aria-hidden="true">🐝</div>
+    <p class="eyebrow">An invitation to indulge</p>
+    <h1>Bee's Beans <span>&amp;</span> Greens</h1>
+    <p class="tagline">Where caffeine meets poor decisions.</p>
+    <button id="enter-cafe" class="primary-button">Enter if you dare</button>
   </div>
 
-  <div id="cart-overlay" class="cart-overlay"></div>
+  <div id="site" class="site hidden">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="brand-lockup">
+          <span class="mini-crest" aria-hidden="true">🐝</span>
+          <div>
+            <p class="eyebrow">Coffee • Tea • Questionable choices</p>
+            <h1>Bee's Beans &amp; Greens</h1>
+          </div>
+        </div>
+        <p class="tagline">Where caffeine meets poor decisions.</p>
+      </div>
+    </header>
 
-  <footer>
-    Small-batch drinks prepared individually for invited guests.
-  </footer>
+    <main id="menu" class="menu-shell">
+      <section class="intro-card">
+        <p>Small-batch drinks prepared one at a time for invited guests.</p>
+        <p class="muted">Choose carefully. Or don't.</p>
+      </section>
+
+      <section class="menu-section">
+        <div class="section-heading">
+          <span>☕</span>
+          <div>
+            <p class="eyebrow">Beans</p>
+            <h2>The Dark Roast Society</h2>
+          </div>
+        </div>
+        <div id="beans-menu" class="menu-grid"></div>
+      </section>
+
+      <section class="menu-section">
+        <div class="section-heading">
+          <span>🍃</span>
+          <div>
+            <p class="eyebrow">Greens</p>
+            <h2>Forbidden Greens</h2>
+          </div>
+        </div>
+        <div id="greens-menu" class="menu-grid"></div>
+      </section>
+    </main>
+
+    <button id="cart-button" class="cart-button" aria-label="Open cart">
+      <span>Your Poor Decisions</span>
+      <strong id="cart-count">0</strong>
+    </button>
+
+    <div id="cart-overlay" class="cart-overlay hidden"></div>
+
+    <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">A record of your choices</p>
+          <h2>Your Poor Decisions</h2>
+        </div>
+        <button id="close-cart" class="icon-button" aria-label="Close cart">×</button>
+      </div>
+
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <button id="checkout-button" class="primary-button full-width">
+          Continue to Pour Decisions
+        </button>
+        <p class="checkout-note">
+          Demo checkout for now. Stripe payment links will be connected next.
+        </p>
+      </div>
+    </aside>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer>
+      <p>Your pour decision is almost ready.</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

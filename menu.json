@@ -1,0 +1,229 @@
+{
+  "beans": [
+    {
+      "id": "espresso-shot",
+      "name": "Espresso Shot",
+      "type": "Double Espresso",
+      "description": "A quick, steamy little shot that leaves you wanting more.",
+      "price": 2,
+      "modifiers": []
+    },
+    {
+      "id": "turkish-temptation",
+      "name": "Turkish Temptation",
+      "type": "Turkish Coffee",
+      "description": "Dark, seductive, and about to rearrange your entire evening.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-ambush",
+      "name": "The Ambush",
+      "type": "Vietnamese Coffee",
+      "description": "A bold Vietnamese coffee that strikes when you least expect it. Dark, rich, and dripping slower than your self-control.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Hot or Iced",
+          "options": [
+            "Hot",
+            "Iced"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso-undressed",
+      "name": "Espresso Undressed",
+      "type": "Affogato",
+      "description": "Sweet underneath, bold on top, and messy in all the right ways.",
+      "price": 3,
+      "modifiers": []
+    },
+    {
+      "id": "steamy-little-latte",
+      "name": "Steamy Little Latte",
+      "type": "No Strings Attached Latte",
+      "description": "Smooth, steamy, and ready to be customized exactly how you like it.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Hot or Iced",
+          "options": [
+            "Hot",
+            "Iced"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Flavor Syrup",
+          "options": [
+            "Flavorless — No Syrup",
+            "Hazel-NUT",
+            "Vanilla",
+            "Pistachio",
+            "Strawberry",
+            "Caramel",
+            "Lavender"
+          ]
+        }
+      ]
+    }
+  ],
+  "greens": [
+    {
+      "id": "ancient-chinese-secrets",
+      "name": "Ancient Chinese Secrets",
+      "type": "Pu-erh Tea",
+      "description": "Smooth, forbidden, and best kept between us.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Hot or Iced",
+          "options": [
+            "Hot",
+            "Iced"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mate-que-te-mate",
+      "name": "Mate que te Mate",
+      "type": "Yerba Mate",
+      "description": "Choose your position: hot, iced, or latte... Just let it happen.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Choose Your Vibe",
+          "options": [
+            "Hot",
+            "Iced",
+            "Latte Style"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monkey-juice",
+      "name": "Monkey Juice",
+      "type": "Oolong Tea",
+      "description": "A little monkey business never hurt anybody.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Hot or Iced",
+          "options": [
+            "Hot",
+            "Iced"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thick-juicy-peach-tea",
+      "name": "Thick Juicy Peach Tea",
+      "type": "Peach Tea",
+      "description": "One sip and you'll understand the name.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Hot or Iced",
+          "options": [
+            "Hot",
+            "Iced"
+          ]
+        },
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creamy-little-thai-tea",
+      "name": "Creamy Little Thai Tea",
+      "type": "Thai Tea",
+      "description": "Dangerous after dark.",
+      "price": 3,
+      "modifiers": [
+        {
+          "name": "Sweetness Level",
+          "options": [
+            "No Sugar or Sweetener",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        }
+      ]
+    }
+  ]
+}
