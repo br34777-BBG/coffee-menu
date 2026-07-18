@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bee's Beans & Greens</title>
+
+  <style>
+    :root {
+      --cream: #f7f0df;
+      --honey: #e2a72e;
+      --dark: #211a16;
+      --brown: #4a3428;
+      --green: #486246;
+      --card: #fffaf0;
+      --muted: #786a61;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 52px 20px 40px;
+      background: var(--dark);
+      color: white;
+    }
+
+    .bee {
+      font-size: 54px;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(34px, 8vw, 58px);
+    }
+
+    header p {
+      margin: 12px 0 0;
+      color: #f3cf7a;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 34px 18px 60px;
+    }
+
+    .section-title {
+      margin: 30px 0 14px;
+      font-size: 27px;
+      color: var(--brown);
+    }
+
+    .menu-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .drink {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 5px 18px rgba(39, 28, 20, 0.1);
+      border: 1px solid rgba(74, 52, 40, 0.1);
+    }
+
+    .drink-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .drink h2 {
+      margin: 0;
+      font-size: 23px;
+    }
+
+    .type {
+      margin: 5px 0 10px;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--brown);
+    }
+
+    .options {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #cfc3b6;
+      background: white;
+      font-size: 16px;
+    }
+
+    .order-button {
+      width: 100%;
+      margin-top: 18px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 11px;
+      background: var(--honey);
+      color: var(--dark);
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .order-button:hover {
+      filter: brightness(0.95);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px 45px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (min-width: 700px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="bee">🐝</div>
+    <h1>Bee's Beans & Greens</h1>
+    <p>Where caffeine meets poor decisions.</p>
+  </header>
+
+  <main>
+
+    <h2 class="section-title">☕ Beans</h2>
+
+    <div class="menu-grid">
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Espresso Shot</h2>
+            <p class="type">Double Espresso</p>
+          </div>
+          <span class="price">$2</span>
+        </div>
+
+        <p class="description">
+          A quick, steamy little shot that leaves you wanting more.
+        </p>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Turkish Temptation</h2>
+            <p class="type">Turkish Coffee</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Dark, seductive, and about to rearrange your entire evening.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>The Ambush</h2>
+            <p class="type">Vietnamese Coffee</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          A bold Vietnamese coffee that strikes when you least expect it.
+          Dark, rich, and dripping slower than your self-control.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Hot or Iced</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Espresso Undressed</h2>
+            <p class="type">Affogato</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Sweet underneath, bold on top, and messy in all the right ways.
+        </p>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Steamy Little Latte</h2>
+            <p class="type">No Strings Attached Latte</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Smooth, steamy, and ready to be customized exactly how you like it.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Hot or Iced</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Flavor Syrup</label>
+            <select>
+              <option>Flavorless — No Syrup</option>
+              <option>Hazel-NUT</option>
+              <option>Vanilla</option>
+              <option>Pistachio</option>
+              <option>Strawberry</option>
+              <option>Caramel</option>
+              <option>Lavender</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+    </div>
+
+    <h2 class="section-title">🍃 Greens</h2>
+
+    <div class="menu-grid">
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Ancient Chinese Secrets</h2>
+            <p class="type">Pu-erh Tea</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Smooth, forbidden, and best kept between us.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Hot or Iced</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Mate que te Mate</h2>
+            <p class="type">Yerba Mate</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Choose your position: hot, iced, or latte... Just let it happen.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Choose Your Vibe</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+              <option>Latte Style</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Monkey Juice</h2>
+            <p class="type">Oolong Tea</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          A little monkey business never hurt anybody.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Hot or Iced</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Thick Juicy Peach Tea</h2>
+            <p class="type">Peach Tea</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          One sip and you’ll understand the name.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Hot or Iced</label>
+            <select>
+              <option>Hot</option>
+              <option>Iced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+      <article class="drink">
+        <div class="drink-top">
+          <div>
+            <h2>Creamy Little Thai Tea</h2>
+            <p class="type">Thai Tea</p>
+          </div>
+          <span class="price">$3</span>
+        </div>
+
+        <p class="description">
+          Dangerous after dark.
+        </p>
+
+        <div class="options">
+          <div>
+            <label>Sweetness Level</label>
+            <select>
+              <option>No Sugar or Sweetener</option>
+              <option>25%</option>
+              <option>50%</option>
+              <option>75%</option>
+              <option selected>100%</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="order-button">Add to Order</button>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer>
+    Small-batch drinks made individually for invited guests.
+  </footer>
+
+</body>
+</html>
