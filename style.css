@@ -473,3 +473,141 @@ footer {
     align-items: flex-start;
   }
 }
+/* ===== Gothic landing-page polish ===== */
+
+.welcome-screen {
+  padding: 28px 20px;
+}
+
+.victorian-frame {
+  position: relative;
+  width: min(78vw, 650px);
+  margin: 0 auto 20px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, #7b633e, #241c12 28%, #a18755 50%, #241c12 72%, #7b633e);
+  clip-path: polygon(
+    5% 0, 95% 0,
+    100% 5%, 100% 95%,
+    95% 100%, 5% 100%,
+    0 95%, 0 5%
+  );
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.75),
+    0 0 0 2px rgba(208, 181, 122, 0.25),
+    inset 0 0 0 3px #171008,
+    inset 0 0 22px rgba(0, 0, 0, 0.9);
+}
+
+.victorian-frame::before,
+.victorian-frame::after {
+  content: "❦";
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  color: #b69b67;
+  background: #100c08;
+  border: 1px solid #7d6842;
+  width: 58px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.victorian-frame::before {
+  top: -15px;
+}
+
+.victorian-frame::after {
+  bottom: -15px;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.victorian-frame .crest-image {
+  display: block;
+  width: 100%;
+  max-height: min(58vh, 580px);
+  object-fit: contain;
+  margin: 0;
+  border: 1px solid rgba(39, 26, 13, 0.9);
+  box-shadow:
+    inset 0 0 28px rgba(0, 0, 0, 0.35),
+    0 0 0 2px rgba(214, 188, 132, 0.15);
+}
+
+.frame-corner {
+  position: absolute;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-color: #d0b57d;
+  pointer-events: none;
+}
+
+.corner-top-left {
+  top: 7px;
+  left: 7px;
+  border-top: 3px double;
+  border-left: 3px double;
+}
+
+.corner-top-right {
+  top: 7px;
+  right: 7px;
+  border-top: 3px double;
+  border-right: 3px double;
+}
+
+.corner-bottom-left {
+  bottom: 7px;
+  left: 7px;
+  border-bottom: 3px double;
+  border-left: 3px double;
+}
+
+.corner-bottom-right {
+  right: 7px;
+  bottom: 7px;
+  border-right: 3px double;
+  border-bottom: 3px double;
+}
+
+.landing-text {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+
+.landing-text .eyebrow {
+  margin: 0;
+}
+
+/* Removes the diagonal red decoration covering menu prices */
+.drink-card::after {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .welcome-screen {
+    padding: 20px 12px;
+  }
+
+  .victorian-frame {
+    width: min(94vw, 540px);
+    padding: 11px;
+    margin-bottom: 18px;
+  }
+
+  .victorian-frame .crest-image {
+    max-height: 53vh;
+  }
+
+  .frame-corner {
+    width: 30px;
+    height: 30px;
+  }
+}
