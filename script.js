@@ -1,4 +1,4 @@
-const CHECKOUT_API_URL = "https://coffee-menu-l495ul2w1-br34777-bbgs-projects.vercel.app";
+const CHECKOUT_API_URL = "https://coffee-menu-murex.vercel.app/api/create-checkout-session";
 
 const state = {
   menu: null,
