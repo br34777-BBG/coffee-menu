@@ -21,7 +21,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 async function loadMenu() {
-  const response = await fetch("menu.json?v=20260720-4", { cache: "no-store" });
+  const response = await fetch("menu.json?v=20260720-6", { cache: "no-store" });
   if (!response.ok) throw new Error("Could not load menu.json");
 
   state.menu = await response.json();
@@ -282,20 +282,47 @@ specialRequests.addEventListener("input", () => {
   specialRequestCount.textContent = specialRequests.value.length;
 });
 
-$("#checkout-button").addEventListener("click", () => {
+$("#checkout-button").addEventListener("click", async () => {
   if (!state.cart.length) {
     showToast("The cart is empty. Temptation awaits.");
     return;
   }
 
-  const orderDraft = {
-    items: state.cart,
-    specialRequests: state.specialRequests,
-    total: state.cart.reduce((sum, item) => sum + item.price, 0)
-  };
+  const checkoutButton = $("#checkout-button");
+  const originalText = checkoutButton.textContent;
 
-  console.log("Order draft ready for Stripe:", orderDraft);
-  showToast("Your pour decision is ready. Stripe checkout is the next ritual.");
+  checkoutButton.disabled = true;
+  checkoutButton.textContent = "Preparing Your Pour Decision…";
+
+  try {
+    const response = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        items: state.cart.map((item) => ({
+          id: item.id,
+          selections: item.selections,
+          extras: item.extras.map((extra) => ({ id: extra.id }))
+        })),
+        specialRequests: state.specialRequests
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.url) {
+      throw new Error(data.error || "Checkout could not be created.");
+    }
+
+    window.location.assign(data.url);
+  } catch (error) {
+    console.error(error);
+    showToast(error.message || "Checkout failed. Please try again.");
+    checkoutButton.disabled = false;
+    checkoutButton.textContent = originalText;
+  }
 });
 
 loadMenu().catch((error) => {

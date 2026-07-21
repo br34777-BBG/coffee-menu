@@ -1,0 +1,9 @@
+{
+  "name": "bee-gees-beans-greens",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "stripe": "^18.4.0"
+  }
+}
