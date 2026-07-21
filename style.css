@@ -736,3 +736,54 @@ footer {
   .crest-image { max-height:53vh; }
   .frame-corner { width:30px;height:30px; }
 }
+
+
+/* ===== V3 select sizing and sweetener behavior ===== */
+
+.modifiers {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.modifier {
+  min-width: 0;
+}
+
+.modifier select {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 2.2rem;
+  font-size: clamp(.82rem, 1.15vw, 1rem);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.modifier.sweetener-hidden {
+  display: none;
+}
+
+/* Give long first controls such as Mate preparation enough room */
+.drink-card[data-drink-id="mate-que-te-mate"] .modifier:first-child {
+  grid-column: 1 / -1;
+}
+
+.drink-card[data-drink-id="mate-que-te-mate"] .modifier:first-child select {
+  max-width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .modifiers {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-card[data-drink-id="mate-que-te-mate"] .modifier:first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .modifier select {
+    font-size: 1rem;
+  }
+}

@@ -25,7 +25,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -58,7 +58,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -106,7 +106,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -160,7 +160,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -185,10 +185,11 @@
       "modifiers": [
         {
           "name": "Preparation",
-          "placeholder": "Choose Hot or Iced",
+          "placeholder": "Choose preparation",
           "options": [
             "Hot",
-            "Iced"
+            "Iced",
+            "Latte Style"
           ]
         },
         {
@@ -201,14 +202,15 @@
             "modifier": "Preparation",
             "values": [
               "Hot",
-              "Iced"
+              "Iced",
+              "Latte Style"
             ]
           }
         },
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -241,7 +243,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -274,7 +276,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",
@@ -300,7 +302,7 @@
         {
           "name": "Sweetness",
           "options": [
-            "0%",
+            "No Sugar",
             "25%",
             "50%",
             "75%",

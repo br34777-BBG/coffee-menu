@@ -21,7 +21,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 async function loadMenu() {
-  const response = await fetch("menu.json?v=20260720-2", { cache: "no-store" });
+  const response = await fetch("menu.json?v=20260720-3", { cache: "no-store" });
   if (!response.ok) throw new Error("Could not load menu.json");
 
   state.menu = await response.json();
@@ -120,6 +120,22 @@ function updateConditionalModifiers(card) {
       select.selectedIndex = 0;
     }
   });
+
+  const sweetness = [...card.querySelectorAll("select")]
+    .find((select) => select.dataset.modifierName === "Sweetness");
+
+  const sweetener = [...card.querySelectorAll(".modifier")]
+    .find((wrapper) =>
+      wrapper.querySelector('select[data-modifier-name="Sweetener Type"]')
+    );
+
+  if (sweetness && sweetener) {
+    const shouldShowSweetener = sweetness.value !== "No Sugar";
+    sweetener.classList.toggle("sweetener-hidden", !shouldShowSweetener);
+
+    const sweetenerSelect = sweetener.querySelector("select");
+    sweetenerSelect.disabled = !shouldShowSweetener;
+  }
 }
 
 function renderMenu(section, targetSelector) {
