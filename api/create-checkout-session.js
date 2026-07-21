@@ -192,10 +192,8 @@ module.exports = async function handler(req, res) {
         phone_number_collection: {
           enabled: true
         },
-        success_url:
-          `${storefrontOrigin}/success.html` +
-          `?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${storefrontOrigin}/`,
+        success_url: "https://br34777-bbg.github.io/coffee-menu/success.html?session_id={CHECKOUT_SESSION_ID}",
+        cancel_url: "https://br34777-bbg.github.io/coffee-menu/",
         metadata: {
           special_requests:
             specialRequests || "None"
