@@ -1,3 +1,5 @@
+const CHECKOUT_API_URL = "PASTE_YOUR_VERCEL_URL_HERE/api/create-checkout-session";
+
 const state = {
   menu: null,
   cart: [],
@@ -21,7 +23,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 async function loadMenu() {
-  const response = await fetch("menu.json?v=20260720-6", { cache: "no-store" });
+  const response = await fetch("menu.json?v=20260720-7", { cache: "no-store" });
   if (!response.ok) throw new Error("Could not load menu.json");
 
   state.menu = await response.json();
@@ -295,7 +297,7 @@ $("#checkout-button").addEventListener("click", async () => {
   checkoutButton.textContent = "Preparing Your Pour Decision…";
 
   try {
-    const response = await fetch("/api/create-checkout-session", {
+    const response = await fetch(CHECKOUT_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
