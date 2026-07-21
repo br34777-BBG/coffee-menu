@@ -116,7 +116,7 @@
         {
           "name": "Flavor Syrup",
           "options": [
-            "Flavorless — No Syrup",
+            "Flavorless \u2014 No Syrup",
             "Hazel-NUT",
             "Vanilla",
             "Pistachio",
@@ -189,7 +189,7 @@
           "options": [
             "Hot",
             "Iced",
-            "Latte Style"
+            "Latte"
           ]
         },
         {
@@ -202,8 +202,7 @@
             "modifier": "Preparation",
             "values": [
               "Hot",
-              "Iced",
-              "Latte Style"
+              "Iced"
             ]
           }
         },
