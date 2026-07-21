@@ -21,7 +21,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 async function loadMenu() {
-  const response = await fetch("menu.json");
+  const response = await fetch("menu.json?v=20260720-2", { cache: "no-store" });
   if (!response.ok) throw new Error("Could not load menu.json");
 
   state.menu = await response.json();
