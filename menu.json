@@ -64,13 +64,6 @@
             "75%",
             "100%"
           ]
-        },
-        {
-          "name": "Sweetener Type",
-          "options": [
-            "Simple Syrup",
-            "Honey"
-          ]
         }
       ]
     },
