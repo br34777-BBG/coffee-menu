@@ -6,7 +6,14 @@
       "type": "Double Espresso",
       "description": "A quick, steamy little shot that leaves you wanting more.",
       "price": 2,
-      "modifiers": []
+      "modifiers": [],
+      "extras": [
+        {
+          "id": "extra-espresso-shot",
+          "name": "Extra Espresso Shot",
+          "price": 1
+        }
+      ]
     },
     {
       "id": "turkish-temptation",
@@ -16,13 +23,20 @@
       "price": 3,
       "modifiers": [
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -42,13 +56,20 @@
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -59,7 +80,14 @@
       "type": "Affogato",
       "description": "Sweet underneath, bold on top, and messy in all the right ways.",
       "price": 3,
-      "modifiers": []
+      "modifiers": [],
+      "extras": [
+        {
+          "id": "extra-espresso-shot",
+          "name": "Extra Espresso Shot",
+          "price": 1
+        }
+      ]
     },
     {
       "id": "steamy-little-latte",
@@ -76,9 +104,9 @@
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
@@ -96,6 +124,20 @@
             "Caramel",
             "Lavender"
           ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ]
+        }
+      ],
+      "extras": [
+        {
+          "id": "extra-espresso-shot",
+          "name": "Extra Espresso Shot",
+          "price": 1
         }
       ]
     }
@@ -116,13 +158,20 @@
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -131,25 +180,46 @@
       "id": "mate-que-te-mate",
       "name": "Mate que te Mate",
       "type": "Yerba Mate",
-      "description": "Choose your position: hot, iced, or latte... Just let it happen.",
+      "description": "Choose hot or iced, then pick the flavor that calls to you.",
       "price": 3,
       "modifiers": [
         {
-          "name": "Choose Your Vibe",
+          "name": "Preparation",
+          "placeholder": "Choose Hot or Iced",
           "options": [
             "Hot",
-            "Iced",
-            "Latte Style"
+            "Iced"
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Flavor",
           "options": [
-            "No Sugar or Sweetener",
+            "Original",
+            "Seasonal Flavoring"
+          ],
+          "conditionalOn": {
+            "modifier": "Preparation",
+            "values": [
+              "Hot",
+              "Iced"
+            ]
+          }
+        },
+        {
+          "name": "Sweetness",
+          "options": [
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -169,13 +239,20 @@
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -195,13 +272,20 @@
           ]
         },
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
@@ -214,13 +298,20 @@
       "price": 3,
       "modifiers": [
         {
-          "name": "Sweetness Level",
+          "name": "Sweetness",
           "options": [
-            "No Sugar or Sweetener",
+            "0%",
             "25%",
             "50%",
             "75%",
             "100%"
+          ]
+        },
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
           ]
         }
       ]
