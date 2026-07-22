@@ -32,22 +32,22 @@
             "100%"
           ]
         },
-       {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-}
+        {
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
       ]
     },
     {
@@ -106,25 +106,19 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetness",
+          "options": [
+            "No Sugar",
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        },
         {
           "name": "Flavor Syrup",
           "options": [
-            "Flavorless \u2014 No Syrup",
+            "Flavorless — No Syrup",
             "Hazel-NUT",
             "Vanilla",
             "Pistachio",
@@ -134,21 +128,22 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
+      ],
       "extras": [
         {
           "id": "extra-espresso-shot",
@@ -184,21 +179,23 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "mate-que-te-mate",
       "name": "Mate que te Mate",
@@ -240,21 +237,23 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "monkey-juice",
       "name": "Monkey Juice",
@@ -280,21 +279,23 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "thick-juicy-peach-tea",
       "name": "Thick Juicy Peach Tea",
@@ -320,21 +321,23 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-},
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "creamy-little-thai-tea",
       "name": "Creamy Little Thai Tea",
@@ -353,21 +356,21 @@
           ]
         },
         {
-  "name": "Sweetener Type",
-  "options": [
-    "Simple Syrup",
-    "Honey"
-  ],
-  "conditionalOn": {
-    "modifier": "Sweetness",
-    "values": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ]
-  }
-}
+          "name": "Sweetener Type",
+          "options": [
+            "Simple Syrup",
+            "Honey"
+          ],
+          "conditionalOn": {
+            "modifier": "Sweetness",
+            "values": [
+              "25%",
+              "50%",
+              "75%",
+              "100%"
+            ]
+          }
+        }
       ]
     }
   ]
