@@ -122,22 +122,6 @@ function updateConditionalModifiers(card) {
       select.selectedIndex = 0;
     }
   });
-
-  const sweetness = [...card.querySelectorAll("select")]
-    .find((select) => select.dataset.modifierName === "Sweetness");
-
-  const sweetener = [...card.querySelectorAll(".modifier")]
-    .find((wrapper) =>
-      wrapper.querySelector('select[data-modifier-name="Sweetener Type"]')
-    );
-
-  if (sweetness && sweetener) {
-    const shouldShowSweetener = sweetness.value !== "No Sugar";
-    sweetener.classList.toggle("sweetener-hidden", !shouldShowSweetener);
-
-    const sweetenerSelect = sweetener.querySelector("select");
-    sweetenerSelect.disabled = !shouldShowSweetener;
-  }
 }
 
 function renderMenu(section, targetSelector) {
