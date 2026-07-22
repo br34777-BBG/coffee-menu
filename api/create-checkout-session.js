@@ -5,14 +5,13 @@ const path = require("node:path");
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 function setCors(res, origin) {
-  const allowedOrigin = process.env.STOREFRONT_ORIGIN || origin || "*";
+  const allowedOrigin = "https://br34777-bbg.github.io";
 
   res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
-
 function readMenu() {
   const menuPath = path.join(process.cwd(), "menu.json");
   return JSON.parse(fs.readFileSync(menuPath, "utf8"));
