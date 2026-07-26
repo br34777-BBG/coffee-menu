@@ -3,27 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pour Decision Confirmed</title>
-  <link rel="stylesheet" href="style.css?v=20260720-6">
-<style>
-  .success-card {
-    overflow: visible;
-  }
 
-  .success-card p {
-    line-height: 1.5;
-    margin: 1rem 0 1.5rem;
-  }
-</style>
+  <title>Pour Decision Confirmed</title>
+
+  <link rel="stylesheet" href="style.css?v=20260725-1">
+
+  <style>
+    .success-card {
+      overflow: visible;
+      width: min(680px, 100%);
+      text-align: center;
+    }
+
+    .success-card p {
+      line-height: 1.5;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .success-card .primary-button {
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      line-height: 1.2;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .success-card {
+        padding: 1.25rem 1rem;
+      }
+
+      .success-card .primary-button {
+        min-width: 0;
+        width: auto;
+        padding: 0.9rem 1rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.07em;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <main class="welcome-screen">
-    <section class="intro-card success-card" style="max-width:680px;text-align:center;">
-      <p class="eyebrow">Payment confirmed</p>
-      <h1>Your pour decision has been accepted.</h1>
-      <p>We received your paid order. Keep this page open until you are ready to return.</p>
-      <a class="primary-button" href="/coffee-menu/">Return to the Apothecary</a>
+
+    <section class="intro-card success-card">
+
+      <p class="eyebrow">
+        Payment confirmed
+      </p>
+
+      <h1>
+        Your pour decision has been accepted.
+      </h1>
+
+      <p>
+        We received your paid order. Keep this page open until you are ready to return.
+      </p>
+
+      <a
+        class="primary-button"
+        href="/coffee-menu/"
+      >
+        Return to the Apothecary
+      </a>
+
     </section>
+
   </main>
 </body>
 </html>
